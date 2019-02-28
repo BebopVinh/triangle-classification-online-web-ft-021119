@@ -12,7 +12,7 @@ class Triangle
 
   def kind
     array = [@l1, @l2, @l3]
-    if array.any?{|l| l <= 0}
+    if array.any?{|l| l <= 0 || l == nil}
       raise TriangleError
     elsif l1 == l2 && l2 == l3
       @kind = :equilateral
@@ -20,7 +20,7 @@ class Triangle
       @kind = :isosceles
     elsif array.uniq.size == 3
       @kind = :scalene
-    else
+    elsif !(array.all? {|a,b,c|})
       raise TriangleError
     end
   end
