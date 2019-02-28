@@ -18,7 +18,7 @@ class Triangle
       @kind = :equilateral
     elsif array.uniq.size == 2
       answer = array.map {|a,b,c| a+b > c}
-      (answer.all?)? (@kind = :isosceles) : raise TriangleError
+      (answer.all?)? (@kind = :isosceles) : (raise TriangleError)
     elsif array.uniq.size == 3
       @kind = :scalene
     end #End of if/else nest
