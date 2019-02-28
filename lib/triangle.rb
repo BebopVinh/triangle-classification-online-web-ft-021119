@@ -21,6 +21,6 @@ class Triangle
         (answer.all?)? @kind = :isosceles : raise TriangleError
     elsif array.uniq.size == 3
       @kind = :scalene
-    end
+    end #End of if/else nest
   end
 end #End of Triangle Class
