@@ -11,16 +11,16 @@ class Triangle
   end
 
   def kind
-    array = [@l1, @l2, @l3]
+    array = [@l1, @l2, @l3].sort
     if array.any?{|l| l <= 0 || l == nil}
       raise TriangleError
-    elsif l1 == l2 && l2 == l3
+    elsif array.uniq.size == 1
       @kind = :equilateral
     elsif array.uniq.size == 2
       @kind = :isosceles
     elsif array.uniq.size == 3
       @kind = :scalene
-    elsif !(array.all? {|a,b,c| a + b > c})
+    elsif !(@l1 + @l2
       raise TriangleError
     end
   end
