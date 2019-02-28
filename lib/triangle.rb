@@ -16,7 +16,7 @@ class Triangle
       raise TriangleError
     elsif array.uniq.size == 1
       @kind = :equilateral
-    elsif array.uniq.size == 2
+    elsif array.any? {|a,b| a == b}
       @kind = :isosceles
     elsif array.uniq.size == 3
       @kind = :scalene
