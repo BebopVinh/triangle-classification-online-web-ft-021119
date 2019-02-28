@@ -21,8 +21,7 @@ class Triangle
     elsif array.uniq.size == 3
       @kind = :scalene
     else
-      answer = array.map {|a,b,c| a+b>c}
-      raise TriangleError
+        raise TriangleError
     end
   end
 end #End of Triangle Class
