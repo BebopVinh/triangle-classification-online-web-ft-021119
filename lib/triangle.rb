@@ -16,9 +16,9 @@ class Triangle
       raise TriangleError
     elsif l1 == l2 && l2 == l3
       @kind = :equilateral
-    elsif l1 == l2 || l2 == l3 || l1 == l3
+    elsif array.uniq.size == 2
       @kind = :isosceles
-    elsif !(l1 == l2 && l2 == l3)
+    elsif array.uniq.size == 3
       @kind = :scalene
     else
       raise TriangleError
