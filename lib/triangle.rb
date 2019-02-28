@@ -12,7 +12,7 @@ class Triangle
 
   def kind
     array = [@l1, @l2, @l3]
-    if array.any?(0)
+    if array.any?{|l| l == 0}
       raise TriangleError
     elsif array.find {|a,b,c| a + b > c}
       raise TriangleError
