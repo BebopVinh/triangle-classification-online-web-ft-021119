@@ -11,8 +11,10 @@ class Triangle
   end
 
   def kind
-    if l1 == 0 || l2 == 0 || l3 == 0
+    array = [@l1, @l2, @l3]
+    if array.any?
       raise TriangleError
+    elsif
     elsif l1 == l2 && l2 == l3
       @kind = :equilateral
     elsif l1 == l2 || l2 == l3 || l1 == l3
