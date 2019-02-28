@@ -8,7 +8,7 @@ class Triangle
   end
 
   def kind
-    if l1 == l2 == l3
+    if l1 == l2 && l2 == l3
       @kind = ':equilateral'
     end
   end
