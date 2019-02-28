@@ -18,10 +18,9 @@ class Triangle
       @kind = :equilateral
     elsif array.uniq.size == 2
       answer = array.map {|a,b,c| a+b > c}
-      if answer.all?
-      @kind = :isosceles
+        (answer.all?)? @kind = :isosceles : raise TriangleError
     elsif array.uniq.size == 3
       @kind = :scalene
-
+    end
   end
 end #End of Triangle Class
