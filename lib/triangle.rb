@@ -16,12 +16,12 @@ class Triangle
       raise TriangleError
     elsif array.uniq.size == 1
       @kind = :equilateral
-    elsif array.any? {|a,b| a == b}
+    elsif array.uniq.size == 2
+      answer = array.map {|a,b,c| a+b > c}
+      if answer.all?
       @kind = :isosceles
     elsif array.uniq.size == 3
       @kind = :scalene
-    else
-        raise TriangleError
-    end
+
   end
 end #End of Triangle Class
