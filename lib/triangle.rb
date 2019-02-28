@@ -20,7 +20,7 @@ class Triangle
       @kind = :isosceles
     elsif array.uniq.size == 3
       @kind = :scalene
-    elsif !(array.all?{|a,b,c| a+b > c}
+    elsif !(array.all?{|a,b,c| a+b > c})
       raise TriangleError
     end
   end
