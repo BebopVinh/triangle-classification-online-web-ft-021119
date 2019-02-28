@@ -12,7 +12,7 @@ class Triangle
 
   def kind
     array = [@l1, @l2, @l3]
-    if array.any?{|l| l == 0}
+    if array.any?{|l| l <= 0}
       raise TriangleError
     elsif l1 == l2 && l2 == l3
       @kind = :equilateral
